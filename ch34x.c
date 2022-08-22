@@ -178,7 +178,7 @@ static struct ch34x_buf *ch34x_buf_alloc( unsigned int size )
 	if( pb == NULL )
 		return NULL;
 
-	pb->buf_buf = kmalloc( size, GFP_KERNEL );
+	pb->buf_buf = kmalloc( size, GFP_KERNEL | GFP_DMA );
 
 	if( pb->buf_buf == NULL )
     {
