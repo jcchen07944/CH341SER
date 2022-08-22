@@ -47,7 +47,8 @@ MODULE_AUTHOR("<tech@wch.cn>");
 
 #define CH34x_VENDOR_ID		0x1A86
 #define CH340_PRODUCT_ID	0x7523
-#define CH341_PRODUCT_ID	0x5523
+#define CH341_PRODUCT_ID	0x5512
+#define CH341_PRODUCT_ID_2	0x5523
 
 #define CH34x_CLOSING_WAIT	(30 * HZ)
 
@@ -145,6 +146,7 @@ struct ch34x_private {
 static struct usb_device_id	id_table [] = {
 	{ USB_DEVICE(CH34x_VENDOR_ID, CH340_PRODUCT_ID) },
 	{ USB_DEVICE(CH34x_VENDOR_ID, CH341_PRODUCT_ID) },
+	{ USB_DEVICE(CH34x_VENDOR_ID, CH341_PRODUCT_ID_2) },
 	{ } //End
 };
 MODULE_DEVICE_TABLE( usb, id_table );
